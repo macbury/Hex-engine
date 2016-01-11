@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.g3d.utils.DefaultTextureBinder;
 import com.badlogic.gdx.graphics.g3d.utils.RenderContext;
 import macbury.neutrino.core.map.Hex;
 import macbury.neutrino.core.map.HexGrid;
-import macbury.neutrino.core.map.IHexGridRenderer;
+import macbury.neutrino.core.map.HexGridRenderer;
 import macbury.neutrino.core.map.SimpleHexRenderer;
 import macbury.neutrino.core.screens.ScreenBase;
 
@@ -22,7 +22,7 @@ public class HexScreen extends ScreenBase {
   private SpriteBatch spriteBatch;
   private Texture hexTexture;
   private HexGrid hexGrid;
-  private IHexGridRenderer hexGridRenderer;
+  private HexGridRenderer hexGridRenderer;
   private RenderContext renderContext;
 
   @Override
@@ -32,17 +32,12 @@ public class HexScreen extends ScreenBase {
 
   @Override
   public void create() {
-    Hex hexA = new Hex(1,1,1);
-    Hex hexB = new Hex(2,2,2);
-    this.camera = new OrthographicCamera();
+    this.camera      = new OrthographicCamera();
     this.spriteBatch = new SpriteBatch();
     hexTexture       = assets.get("exhex.png", Texture.class);
     renderContext    = new RenderContext(new DefaultTextureBinder(DefaultTextureBinder.WEIGHTED));
-    hexGrid          = new HexGrid(10, 10);
+    hexGrid          = new HexGrid(7);
     hexGridRenderer  = new SimpleHexRenderer(hexGrid, renderContext);
-
-
-
 
   }
 
