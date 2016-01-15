@@ -7,7 +7,7 @@ import com.badlogic.gdx.math.Vector2;
  * This class defines each hexagonal tile on the map using cube cordinate system
  */
 public class Hex {
-  public final static int SIZE         = 26;
+  public final static int SIZE         = 1;
   public final static float WIDTH      = SIZE * 2;
   public final static float HEIGHT     = MathUtils.floorPositive((float)(Math.sqrt(3.0)/2.0) * WIDTH);
   private final static Hex tempHex     = new Hex();
@@ -50,7 +50,7 @@ public class Hex {
    * @param hexToCopy
    * @return current hex tile
    */
-  private Hex set(Hex hexToCopy) {
+  public Hex set(Hex hexToCopy) {
     this.q = hexToCopy.q;
     this.r = hexToCopy.r;
     this.s = hexToCopy.s;

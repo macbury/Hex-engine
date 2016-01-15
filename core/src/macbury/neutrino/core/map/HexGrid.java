@@ -1,5 +1,6 @@
 package macbury.neutrino.core.map;
 
+import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Disposable;
 import com.badlogic.gdx.utils.ObjectMap;
 
@@ -41,6 +42,7 @@ public class HexGrid implements Disposable {
       }
     }
   }
+
 
   public void put(int q, int r, Field field) {
     fields[r + radius][q + radius] = field;
