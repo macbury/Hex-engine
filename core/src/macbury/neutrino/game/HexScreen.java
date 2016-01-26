@@ -42,7 +42,7 @@ public class HexScreen extends ScreenBase {
     this.spriteBatch = new SpriteBatch();
     hexTexture       = assets.get("exhex.png", Texture.class);
     renderContext    = new RenderContext(new DefaultTextureBinder(DefaultTextureBinder.WEIGHTED));
-    hexGrid          = new HexGrid(100);
+    hexGrid          = new HexGrid(24);
     hexGridRenderer  = new SimpleHexRenderer(hexGrid, renderContext);
     cameraController = new CameraInputController(camera);
 
